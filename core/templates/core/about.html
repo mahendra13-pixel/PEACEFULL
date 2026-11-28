@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock css %}
+{% block content %}
+
+<!-- About Hostel Section -->
+<section class="about-hostel-section">
+    <div class="container">
+        <div class="about-hostel-grid">
+            <div class="about-hostel-image">
+                <img src="{% static 'images/b.png' %}" alt="Hostel Building" class="hostel-img">
+            </div>
+            <div class="about-hostel-content">
+                <span class="section-badge">About Us</span>
+                <h2>A Registered & Trusted Hostel</h2>
+
+                <div class="pan-badge">
+                    <i class="fas fa-shield-check"></i>
+                    <div>
+                        <span class="pan-label">PAN No.</span>
+                        <span class="pan-number">119675245</span>
+                    </div>
+                </div>
+
+                <p>We are a government-registered hostel committed to providing safe, comfortable, and affordable accommodation for students and working professionals. With verified legal standing and a strong focus on hygiene, security, and community living, we ensure every resident feels at home.</p>
+
+                <ul class="hostel-highlights">
+                    <li><i class="fas fa-check-circle"></i> Fully registered & tax-compliant business</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 security and CCTV surveillance</li>
+                    <li><i class="fas fa-check-circle"></i> Clean, furnished rooms with essential amenities</li>
+                    <li><i class="fas fa-check-circle"></i> Nutritious daily meals included</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+

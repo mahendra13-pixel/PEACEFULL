@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock css %}
+{% block content %}
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="contact-info-side">
+                <div class="contact-info-card">
+                    <h3>Let's Talk</h3>
+                    <p>Want to contact us?.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Peaceful+Boys+Hostel,+10+Tokha+Road,+Kathmandu,+Nepal"
+                                    target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Visit Us</h4>
+                                <p>Tokha-10, Kathmandu</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+9779823279833">+9779823279833</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Email Us</h4>
+                                <a href="https://mail.google.com/mail/?view=cm&to=peacefulboyshostel@gmail.com"
+                                    target="_blank">
+                                    peacefulboyshostel@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Business Hours</h4>
+                                <p>Sunday - Saturday: 6:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/SuNeilKunWar/" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/peacefulboyshostel/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/9779823279833" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-side">
+                <div class="contact-form-card">
+                    <h3 id="messageee">Send Us a Message</h3>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                    <form method="POST" action="{% url 'contact' %}#messageee" id="contactform">
+                        {% csrf_token %}
+                        <div id="ho">
+                            {% if messages %}
+                            {% for message in messages %}
+                            <div class="alert alert-primary" role="alert">
+                                {{message}}
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Full Name *</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="fullname" name="name" placeholder="" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" placeholder=""
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <div class="input-icon">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="phone1" name="phone" placeholder="+977 9742386629" required>
+                                <span id="error_msg" style="color: red; display: none;">Invalid Phone number</span>
+                            </div>
+                        </div>
+
+                        <!-- NEW: Book Room dropdown -->
+                        <div class="form-group">
+                            <label for="room_type">Book Room *</label>
+                            <div class="input-icon">
+                                <i class="fas fa-bed"></i>
+                                <select id="room_type" name="room_type" required
+                                    style="width:100%;padding:12px 12px 12px 40px;border:1px solid #ced4da;border-radius:6px;font-family:inherit;font-size:14px;color:#495057;background-color:#fff;appearance:none;-webkit-appearance:none;-moz-appearance:none;cursor:pointer;">
+                                    <option value="" disabled selected>Select room type</option>
+                                    <option value="double_seater">Double Seater</option>
+                                    <option value="triple_seater">Triple Seater</option>
+                                </select>
+                                <!-- dropdown arrow (since appearance:none removes the native one) -->
+                                <span style="position:absolute;right:14px;top:50%;transform:translateY(-50%);pointer-events:none;color:#6c757d;font-size:12px;">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <div class="input-icon textarea-icon">
+                                <i class="fas fa-comment"></i>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Please describe your question or concern..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="container">
+        <div class="map-wrapper">
+            <iframe
+                src="https://www.google.com/maps?q=Peaceful+Boys+Hostel,+10+Tokha+Rd,+Kathmandu+44600,+Nepal&output=embed"
+                width="1400"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+{% endblock content %}

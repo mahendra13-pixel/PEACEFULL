@@ -1,0 +1,343 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+{% endblock css %}
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-bg-shape"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-badge bg-primary text-dark">
+                    <img src="{% static 'images/logo.png' %}" alt="Peaceful Boys Hostel Logo" style="height:30px">
+                    Welcome to Peaceful Boys Hostel
+                </span>
+                <h1 class="hero-title">
+                    Your Ideal Home in
+                    <span class="gradient-text d-flex">Kathmandu Since 2073</span>
+                </h1>
+                <p class="hero-description">
+                    Peaceful Boys Hostel is the ideal home for students and working professionals searching
+                    for a secure, quiet, comfortable, and affordable place to stay in Kathmandu. Since 2073
+                    (2016 AD), we've offered hygienic homestyle meals, high-speed Wi-Fi, fully furnished
+                    rooms, and a dedicated study environment.
+
+                    Rated 5/5 by our students and residents, we're proud to be a peaceful, family-like
+                    atmosphere built for academic success and personal growth.
+                </p>
+                <div class="hero-buttons">
+                    <a href="tel:+9779823279833" class="btn btn-primary btn-large">
+                        <i class="fas fa-bed"></i> Book Your Room
+                    </a>
+                    <a href="#gallery" class="btn btn-outline btn-primary btn-large">
+                        <i class="fas fa-images"></i> See Gallery
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5.0★</span>
+                        <span class="stat-label">Rated by Residents</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">CCTV & Security</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2073</span>
+                        <span class="stat-label">Established (2016 AD)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card float-1">
+                    <i class="fas fa-wifi"></i>
+                    <span>High-Speed Wi-Fi</span>
+                </div>
+                <div class="floating-card float-2">
+                    <i class="fas fa-utensils"></i>
+                    <span>Homestyle Meals</span>
+                </div>
+                <div class="floating-card float-3">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>CCTV Monitored</span>
+                </div>
+                <img src="{% static 'images/b.png' %}" alt="Peaceful Boys Hostel">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities / Categories Section -->
+<section class="categories-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Outstanding Amenities</span>
+            <h2>Everything You Need, All in One Place</h2>
+            <p>Comfort, discipline, and community come together at Peaceful Boys Hostel</p>
+        </div>
+        <div class="categories-grid">
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure & Safe Environment</h3>
+                <span>CCTV Monitored</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Hygienic Homestyle Meals</h3>
+                <span>Veg / Non-Veg</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>High-Speed Wi-Fi</h3>
+                <span>& Internet</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-broom"></i>
+                </div>
+                <h3>Routine Cleaning</h3>
+                <span>Services Included</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-couch"></i>
+                </div>
+                <h3>Fully Furnished Rooms</h3>
+                <span>Comfortable Bedding</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h3>24/7 Hot & Cold Water</h3>
+                <span>& Electricity</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <h3>Dedicated Study Environment</h3>
+                <span>Quiet Hours</span>
+            </a>
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-water"></i>
+                </div>
+                <h3>Laundry</h3>
+                <span>Washing Services</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Photo Gallery Section (4 Photos) -->
+<section class="gallery-section" id="gallery">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Take a Look Inside</span>
+            <h2>Life at Peaceful Boys Hostel</h2>
+            <p>A glimpse of our rooms, building, dining, and family-like atmosphere</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="{% static 'images/perfect.png' %}" alt="Furnished Hostel Room">
+                <div class="gallery-overlay">
+                    <h4>Furnished Rooms</h4>
+                    <p>Comfortable bedding, clean and cozy</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/bed3.png' %}" alt="Peaceful Boys Hostel Building">
+                <div class="gallery-overlay">
+                    <h4>Our Building</h4>
+                    <p>Prayashnagar, Basundhara-Chowk, Kathmandu</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/tshirt.jpeg' %}" alt="Dining Together">
+                <div class="gallery-overlay">
+                    <h4>Dining Together</h4>
+                    <p>Hygienic homestyle meals, veg & non-veg</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/cctv.jpeg' %}" alt="Peaceful Boys Hostel Community">
+                <div class="gallery-overlay">
+                    <h4>Family-like Atmosphere</h4>
+                    <p>A peaceful home away from home</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Counter Section -->
+<section class="stats-section">
+    <div class="stats-overlay"></div>
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-bed"></i>
+                <div class="stat-number" data-target="37">0</div>
+                <div class="stat-label">Beds</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-label">Residents Housed</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-shield-alt"></i>
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">Hours CCTV Security</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <div class="stat-number" data-target="10">0</div>
+                <div class="stat-label">Years Since 2073</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <div class="image-stack">
+                    <img src="{% static 'images/p.png' %}" alt="About Peaceful Boys Hostel" class="img-main">
+                    <div class="image-card">
+                        <i class="fas fa-house-chimney"></i>
+                        <span>Established 2073</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-badge">Why Choose Us</span>
+                <h2>A Peaceful, Family-like Atmosphere for Academic Success</h2>
+                <p>Peaceful Boys Hostel is the ideal home for a secure, comfortable, and affordable place to
+                    stay in Kathmandu for students and working professionals. Established in 2073 (2016 AD),
+                    we've built a full family-like academic environment where residents feel supported both
+                    in their studies and their personal growth.</p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <div>
+                            <h4>Student & Family Focused</h4>
+                            <p>Best for boys and college students, with a family environment and good quality food</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <div>
+                            <h4>Perfect Management & Vibe</h4>
+                            <p>A dedicated management team for a comfortable, well-run stay</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <div>
+                            <h4>Budget-Friendly & Worth It</h4>
+                            <p>A very budget-friendly boys hostel, good for anyone</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="tel:+9779823279833" class="btn btn-primary">Contact Us Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Rated & Highly Recommended</span>
+            <h2>What Our Residents Say</h2>
+            <p>Rated 5/5 stars by students and residents at Peaceful Boys Hostel</p>
+        </div>
+        <div class="testimonials-slider" id="testimonialSlider">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Incredible experience staying at Peaceful. The vibe here is so
+                    friendly and welcoming."</p>
+                <div class="testimonial-author">
+                    <img src="{% static 'images/m.png' %}" alt="Author">
+                    <div>
+                        <h4>Mahendra Kunwar</h4>
+                        <span>Resident, a year ago</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"I enjoyed every moment staying here. It's really good for students
+                    studying in school or college, and the management is also perfect."</p>
+                <div class="testimonial-author">
+                    <img src="{% static 'images/t.png' %}" alt="Author">
+                    <div>
+                        <h4>Tekendra DC</h4>
+                        <span>Residents</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Very budget-friendly boys hostel, good for anyone. A true home
+                    away from home in Kathmandu."</p>
+                <div class="testimonial-author">
+                    <img src="{% static 'images/pasang.png' %}" alt="Author">
+                    <div>
+                        <h4>Pasang Rijal</h4>
+                        <span>Resident</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-wrapper">
+            <h2>Peaceful Living, Better Learning</h2>
+            <p>Book your room at Peaceful Boys Hostel today — Jyotinagar, Tokha-10, Kathmandu.
+                Call +977 9823279833 or email peacefulboyshostel@gmail.com.</p>
+            <a href="tel:+9779823279833" class="btn btn-primary btn-large">
+                <i class="fas fa-rocket"></i> Book a Room Now
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock content %}
